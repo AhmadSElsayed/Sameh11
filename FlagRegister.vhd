@@ -14,9 +14,10 @@ library ieee;
 use ieee.std_logic_1164.all;
 ---------------------------------------------
 entity FlagRegister is
-    generic(GenericVariable : integer := GenericValue);
+    generic(Size : integer := 4);
     port(
         --ToDo
+        Clk : in std_logic
     );
 end entity FlagRegister;
 ---------------------------------------------

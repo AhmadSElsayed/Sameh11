@@ -14,14 +14,16 @@
 ---------------------------------------------
 library ieee;
 use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+use ieee.math_real.all;
 ---------------------------------------------
 entity ALU is
     generic(size : integer := 32);
     port(
-        a,b : in std_logic_vector(size downto 0);
-        z : out std_logic_vector(size downto 0);
-        flags : out std_logic(3 downto 0);
-        opcode : in std_logic(4 downto 0)
+        a,b : in std_logic_vector(size-1 downto 0);
+        z : out std_logic_vector(size-1 downto 0);
+        flags : out std_logic_vector(3 downto 0);
+        opcode : in std_logic_vector(4 downto 0)
     );
 end entity ALU;
 ---------------------------------------------
